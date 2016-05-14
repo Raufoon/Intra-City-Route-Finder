@@ -1,0 +1,21 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=52:49:13:91:85:D5:EC:12:47:92:DD:52:CB:8A:1B:10:67:05:78:72%3Bcom.example.rauf00n.intracityroutefinder
+
+    You can also add your credentials to an existing key, using this line:
+    52:49:13:91:85:D5:EC:12:47:92:DD:52:CB:8A:1B:10:67:05:78:72;com.example.rauf00n.intracityroutefinder
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBSKvQhrLrdLtPJn4SBOArq-huPAI-7ErY
+    </string>
+</resources>

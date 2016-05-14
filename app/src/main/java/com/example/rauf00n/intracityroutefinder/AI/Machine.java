@@ -37,7 +37,7 @@ public class Machine {
     this method receives a Source, Destination and Constraint object.
     the UI will pass user-given inputs in this method
     */
-    public void takeInput(Node source, Node destination, Constraint constraint)
+    public void giveInput(Node source, Node destination, Constraint constraint)
     {
         this.constraint = constraint;
         this.source = source;
@@ -60,6 +60,7 @@ public class Machine {
     */
     Output calculateRoute()
     {
-        return null;
+        //demo
+        return new Output();
     }
 }
