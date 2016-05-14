@@ -3,6 +3,8 @@ package com.example.rauf00n.intracityroutefinder.AI;
 import com.example.rauf00n.intracityroutefinder.AI.Util.Constraint;
 import com.example.rauf00n.intracityroutefinder.AI.Util.Node;
 
+import java.util.ArrayList;
+
 /**
  * Created by RAUF00N on 5/15/2016.
  */
@@ -31,5 +33,10 @@ public class Machine {
         this.destination = destination;
     }
 
+    public ArrayList<Node> getOutput()
+    {
+        // not implemented
+        return null;
+    }
 
 }
