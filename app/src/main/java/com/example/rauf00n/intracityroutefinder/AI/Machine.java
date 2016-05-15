@@ -61,6 +61,11 @@ public class Machine {
     Output calculateRoute()
     {
         //demo
-        return new Output();
+        Output output = new Output();
+        output.addNodes(new Node("A",23.8103,90.4125,"")
+                , new Node("C",23.8120,90.4155,"")
+                , new Node("D",23.8110,90.4105,"")
+        );
+        return output;
     }
 }
