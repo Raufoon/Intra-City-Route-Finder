@@ -32,7 +32,6 @@ public class Machine {
     }
     //.......................................
 
-
     /*
     this method receives a Source, Destination and Constraint object.
     the UI will pass user-given inputs in this method
