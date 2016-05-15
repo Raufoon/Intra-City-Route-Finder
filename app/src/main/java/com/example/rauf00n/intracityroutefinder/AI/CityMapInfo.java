@@ -58,7 +58,7 @@ public class CityMapInfo {
         }
         catch (Exception e)
         {
-            Log.w("~~~~~~~~~~~~~~~~~~~~~",e.toString()+e.getMessage());
+
         }
     }
 
@@ -95,7 +95,6 @@ public class CityMapInfo {
 
                 case XmlPullParser.START_TAG:
                     name = parser.getName();
-                    Log.w("~~~~~~~~~~~~~~~~~~~~~",name);
 
                     if(name.equals("Stoppages")) stoppages.removeAll(stoppages);
                     else if(name.equals("id")) id = Integer.parseInt(parser.nextText());
@@ -117,7 +116,6 @@ public class CityMapInfo {
 
                 case XmlPullParser.END_TAG:
                     name = parser.getName();
-                    Log.w("~~~~~~~~~~~~~~~~~~~~~",name);
                     if(name.equals("Node"))
                     {
                         this.nodes.add(new Node(id,Name,Lat,Lng));

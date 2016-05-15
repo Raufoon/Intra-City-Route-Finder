@@ -16,8 +16,8 @@ public class Machine {
     Inputs
     */
     Constraint constraint;
-    Node source;
-    Node destination;
+    String source;
+    String destination;
 
     /* no need to look at bellow section, i just made it singleton which is unnecessary*/
     private Machine()
@@ -36,7 +36,7 @@ public class Machine {
     this method receives a Source, Destination and Constraint object.
     the UI will pass user-given inputs in this method
     */
-    public void giveInput(Node source, Node destination, Constraint constraint)
+    public void giveInput(String source, String destination, Constraint constraint)
     {
         this.constraint = constraint;
         this.source = source;
