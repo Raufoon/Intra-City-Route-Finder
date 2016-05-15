@@ -23,8 +23,8 @@ public class Node {
     public Node(double Lat, double Long)
     {
         position = new LatLng(Lat,Long);
-        this.msg = "no message";
-        this.name = "a node";
+        this.msg = "";
+        this.name = "";
     }
 
     public Node(String name,double Lat, double Long, String msg)
