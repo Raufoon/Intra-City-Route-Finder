@@ -11,7 +11,7 @@ This class will contain the result calculated by our AI.
 It must contain a 'PATH' from source to destination nodes
 */
 public class Output {
-    ArrayList<Node>path;
+    ArrayList<OutputNode>path;
 
     public Output()
     {
@@ -21,9 +21,9 @@ public class Output {
     /*
     pass the nodes (calculated by AI) in this method from source to destination
     */
-    public void addNodes(Node... nodes)
+    public void addNodes(OutputNode... nodes)
     {
-        for (Node node : nodes) {
+        for (OutputNode node : nodes) {
             path.add(node);
         }
     }
@@ -31,7 +31,7 @@ public class Output {
     {
         return path.size();
     }
-    public ArrayList<Node> getPath()
+    public ArrayList<OutputNode> getPath()
     {
         return path;
     }

@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.rauf00n.intracityroutefinder.AI.Machine;
-import com.example.rauf00n.intracityroutefinder.AI.Util.Node;
 import com.example.rauf00n.intracityroutefinder.AI.Util.Output;
+import com.example.rauf00n.intracityroutefinder.AI.Util.OutputNode;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -66,15 +66,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        for (Node node : output.getPath()) {
+        for (OutputNode node : output.getPath()) {
             mMap.addMarker(new MarkerOptions().position(node.getPosition()).title(node.getName()));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(node.getPosition(), 14.0f));
         }
 
 
         for (int i = 1; i < output.getPath().size(); i++) {
-            Node src = output.getPath().get(i - 1);
-            Node dest = output.getPath().get(i);
+            OutputNode src = output.getPath().get(i - 1);
+            OutputNode dest = output.getPath().get(i);
 
             String url = getDirectionsUrl(src.getPosition(), dest.getPosition());
             DownloadTask downloadTask = new DownloadTask();

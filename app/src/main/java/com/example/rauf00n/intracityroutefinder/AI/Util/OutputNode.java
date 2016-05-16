@@ -12,7 +12,7 @@ Node represents a physical location.
 You may give it a String as name
 But the GPS co-ordinate of that location must be an attribute of this class
 */
-public class Node {
+public class OutputNode {
     // name of the location area
     String name;
     // latitude and longitude
@@ -20,14 +20,14 @@ public class Node {
     //short message
     String msg;
 
-    public Node(double Lat, double Long)
+    public OutputNode(double Lat, double Long)
     {
         position = new LatLng(Lat,Long);
         this.msg = "";
         this.name = "";
     }
 
-    public Node(String name,double Lat, double Long, String msg)
+    public OutputNode(String name,double Lat, double Long, String msg)
     {
         position = new LatLng(Lat,Long);
         this.msg = msg;

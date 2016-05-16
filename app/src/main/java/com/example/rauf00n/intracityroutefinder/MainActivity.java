@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.rauf00n.intracityroutefinder.AI.Machine;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Machine.getInstance().ReadXML(this);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

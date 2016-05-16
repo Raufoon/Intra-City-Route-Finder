@@ -43,7 +43,9 @@ public class CityMapInfo {
         initXML();
     }
 
-
+    /*
+    you don't need to look at this code, i just parsed the XML
+    */
     void initXML()
     {
         try{
@@ -62,6 +64,7 @@ public class CityMapInfo {
         }
     }
 
+    /* no need to look at this function*/
     private void parseXML(XmlPullParser parser) throws Exception
     {
         int eventType = parser.getEventType();
@@ -137,5 +140,19 @@ public class CityMapInfo {
             eventType = parser.next();
         }
     }
+
+
+
+    /* The interfaces you will use in the AI */
+
+    // create a graph from the parsed XML data
+    // use appropriate data structure
+    void CreateGraph()
+    {
+
+    }
+
+
+
 
 }

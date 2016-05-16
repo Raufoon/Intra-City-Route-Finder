@@ -10,15 +10,15 @@ import com.example.rauf00n.intracityroutefinder.AI.CityMapInfo;
 import com.example.rauf00n.intracityroutefinder.AI.Machine;
 import com.example.rauf00n.intracityroutefinder.AI.Util.Output;
 
+
 public class InputActivity extends AppCompatActivity {
 
-    CityMapInfo cityMapInfo;
+    Machine cityMapInfo = Machine.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-        cityMapInfo = new CityMapInfo(this);
     }
 
     @Override

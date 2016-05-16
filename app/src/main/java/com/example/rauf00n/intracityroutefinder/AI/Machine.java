@@ -1,8 +1,13 @@
 package com.example.rauf00n.intracityroutefinder.AI;
 
+import android.app.Activity;
+
 import com.example.rauf00n.intracityroutefinder.AI.Util.Constraint;
-import com.example.rauf00n.intracityroutefinder.AI.Util.Node;
+import com.example.rauf00n.intracityroutefinder.AI.Util.OutputNode;
 import com.example.rauf00n.intracityroutefinder.AI.Util.Output;
+import com.example.rauf00n.intracityroutefinder.AI.XMLObjects.Bus;
+import com.example.rauf00n.intracityroutefinder.AI.XMLObjects.Edge;
+import com.example.rauf00n.intracityroutefinder.AI.XMLObjects.Node;
 
 import java.util.ArrayList;
 
@@ -11,6 +16,11 @@ import java.util.ArrayList;
  */
 public class Machine {
     public static Machine machine = null;
+
+    // XML data
+    public ArrayList<Node>nodes;
+    public ArrayList<Edge>edges;
+    public ArrayList<Bus>buses;
 
     /*
     Inputs
@@ -29,6 +39,13 @@ public class Machine {
     {
         if(machine == null) machine = new Machine();
         return machine;
+    }
+    public void ReadXML(Activity activity)
+    {
+        CityMapInfo cityMapInfo = new CityMapInfo(activity);
+        this.nodes = cityMapInfo.nodes;
+        this.edges = cityMapInfo.edges;
+        this.buses = cityMapInfo.buses;
     }
     //.......................................
 
@@ -61,9 +78,9 @@ public class Machine {
     {
         //demo
         Output output = new Output();
-        output.addNodes(new Node("A",23.8103,90.4125,"")
-                , new Node("C",23.8120,90.4155,"")
-                , new Node("D",23.8110,90.4105,"")
+        output.addNodes(new OutputNode("A",23.8103,90.4125,"")
+                , new OutputNode("C",23.8120,90.4155,"")
+                , new OutputNode("D",23.8110,90.4105,"")
         );
         return output;
     }
