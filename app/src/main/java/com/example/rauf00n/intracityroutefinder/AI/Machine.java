@@ -76,7 +76,7 @@ public class Machine {
     */
     Output calculateRoute()
     {
-        //demo
+        //demo... delete them
         Output output = new Output();
         output.addNodes(new OutputNode("A",23.8103,90.4125,"")
                 , new OutputNode("C",23.8120,90.4155,"")
@@ -84,4 +84,23 @@ public class Machine {
         );
         return output;
     }
+
+    /*
+    these methods returns the nodes, edges and buses.
+    to get a clear idea about the internal structure of these 3 objects,
+    have a look at "/AI/XMLObjects/"
+    * */
+    ArrayList<Node> getNodes()
+    {
+        return nodes;
+    }
+    ArrayList<Edge> getEdges()
+    {
+        return edges;
+    }
+    ArrayList<Bus> getBuses()
+    {
+        return  buses;
+    }
+
 }

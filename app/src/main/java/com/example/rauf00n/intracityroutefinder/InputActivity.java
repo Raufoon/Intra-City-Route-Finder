@@ -24,6 +24,10 @@ public class InputActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+
+
+        /* following are demo works, delete em*/
         TextView tv = (TextView)findViewById(R.id.test);
         tv.setText("Nodes:\n");
         for(int i=0;i<cityMapInfo.nodes.size();i++)
