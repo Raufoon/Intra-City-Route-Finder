@@ -9,14 +9,11 @@ public class Bus {
     public int id;
     public String Name;
     public int FareRate_CostPerKM;
-    public ArrayList Stoppages;
 
-    public Bus(int id, String Name, int FareRate,ArrayList stoppages)
+    public Bus(int id, String Name, int FareRate)
     {
         this.id = id;
         this.FareRate_CostPerKM = FareRate;
         this.Name = Name;
-
-        Stoppages = new ArrayList(stoppages);
     }
 }

@@ -52,11 +52,7 @@ public class InputActivity extends AppCompatActivity {
         {
             tv.append("name = "+cityMapInfo.buses.get(i).Name+" id = "
                     +cityMapInfo.buses.get(i).id+" fare = "
-                    +cityMapInfo.buses.get(i).FareRate_CostPerKM+"\nRoute:");
-            for(int j=0;j<cityMapInfo.buses.get(i).Stoppages.size();j++)
-            {
-                tv.append(cityMapInfo.buses.get(i).Stoppages.get(j)+"");
-            }
+                    +cityMapInfo.buses.get(i).FareRate_CostPerKM+"\n");
             tv.append("\n");
         }
 

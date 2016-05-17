@@ -69,8 +69,6 @@ public class CityMapInfo {
     {
         int eventType = parser.getEventType();
 
-        ArrayList stoppages = new ArrayList();
-
 
         Node node=null;
         int id=-1;
@@ -99,8 +97,7 @@ public class CityMapInfo {
                 case XmlPullParser.START_TAG:
                     name = parser.getName();
 
-                    if(name.equals("Stoppages")) stoppages.removeAll(stoppages);
-                    else if(name.equals("id")) id = Integer.parseInt(parser.nextText());
+                    if(name.equals("id")) id = Integer.parseInt(parser.nextText());
                     else if(name.equals("Name")) Name = parser.nextText();
                     else if(name.equals("Lat")) Lat = Double.parseDouble(parser.nextText());
                     else if(name.equals("Lng")) Lng = Double.parseDouble(parser.nextText());
@@ -112,7 +109,6 @@ public class CityMapInfo {
                     else if(name.equals("Night")) night = Integer.parseInt(parser.nextText());
 
                     else if(name.equals("FareRate")) FareRate = Integer.parseInt(parser.nextText());
-                    else if(name.equals("Stoppage")) stoppages.add(parser.nextText());
 
 
                     break;
@@ -129,7 +125,7 @@ public class CityMapInfo {
                     }
                     else if(name.equals("Bus"))
                     {
-                        this.buses.add(new Bus(id,Name,FareRate,stoppages));
+                        this.buses.add(new Bus(id,Name,FareRate));
                     }
                     else if(name.equals("TrafficFactor"))
                     {

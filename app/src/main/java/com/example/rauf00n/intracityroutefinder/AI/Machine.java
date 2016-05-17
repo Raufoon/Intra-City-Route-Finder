@@ -78,6 +78,7 @@ public class Machine {
     {
         //demo... delete them
         Output output = new Output();
+
         output.addNodes(new OutputNode("A",23.8103,90.4125,"")
                 , new OutputNode("C",23.8120,90.4155,"")
                 , new OutputNode("D",23.8110,90.4105,"")
