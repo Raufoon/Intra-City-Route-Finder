@@ -25,7 +25,7 @@ public class Machine {
     /*
     Inputs
     */
-    Constraint constraint;
+    String constraint;
     String source;
     String destination;
 
@@ -53,7 +53,7 @@ public class Machine {
     this method receives a Source, Destination and Constraint object.
     the UI will pass user-given inputs in this method
     */
-    public void giveInput(String source, String destination, Constraint constraint)
+    public void giveInput(String source, String destination, String constraint)
     {
         this.constraint = constraint;
         this.source = source;

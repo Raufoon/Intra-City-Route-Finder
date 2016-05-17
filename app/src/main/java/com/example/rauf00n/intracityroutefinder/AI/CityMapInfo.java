@@ -81,10 +81,12 @@ public class CityMapInfo {
         int dest=-1;
         TrafficFactor trafficFactor = null;
         int morning=0,noon=0,night=0;
+        ArrayList bus_ids = new ArrayList();
 
         Bus bus;
         int FareRate=1;
 
+        Log.w("!!!!!!!!!!!!!!!","xxxxxxxxxxxxxxxx");
         while (eventType != XmlPullParser.END_DOCUMENT){
             String name = null;
 
@@ -96,7 +98,7 @@ public class CityMapInfo {
 
                 case XmlPullParser.START_TAG:
                     name = parser.getName();
-
+                    Log.w("!!!!!!!!!!!!!!!",name);
                     if(name.equals("id")) id = Integer.parseInt(parser.nextText());
                     else if(name.equals("Name")) Name = parser.nextText();
                     else if(name.equals("Lat")) Lat = Double.parseDouble(parser.nextText());
@@ -107,6 +109,7 @@ public class CityMapInfo {
                     else if(name.equals("Morning")) morning = Integer.parseInt(parser.nextText());
                     else if(name.equals("Noon")) noon = Integer.parseInt(parser.nextText());
                     else if(name.equals("Night")) night = Integer.parseInt(parser.nextText());
+                    else if(name.equals("Bus_id")) bus_ids.add(Integer.parseInt(parser.nextText()));
 
                     else if(name.equals("FareRate")) FareRate = Integer.parseInt(parser.nextText());
 
@@ -115,13 +118,19 @@ public class CityMapInfo {
 
                 case XmlPullParser.END_TAG:
                     name = parser.getName();
+                    Log.w("!!!!!!!!!!!!!!!",name);
                     if(name.equals("Node"))
                     {
                         this.nodes.add(new Node(id,Name,Lat,Lng));
                     }
                     else if(name.equals("Edge"))
                     {
-                        this.edges.add(new Edge(src,dest,trafficFactor));
+                        this.edges.add(new Edge(src,dest,trafficFactor,bus_ids));
+                        for(Object o: bus_ids)
+                        {
+                            Log.w("!!!!!!!!!!!!!!!!!!",o.toString());
+                        }
+                        bus_ids.removeAll(bus_ids);
                     }
                     else if(name.equals("Bus"))
                     {
@@ -131,6 +140,7 @@ public class CityMapInfo {
                     {
                         trafficFactor = new TrafficFactor(morning,noon,night);
                     }
+
                     break;
             }
             eventType = parser.next();

@@ -11,11 +11,12 @@ public class Edge {
     public TrafficFactor trafficFactor;
     public ArrayList bus_ids = new ArrayList();
 
-    public Edge(int Src,int Dest,TrafficFactor trafficFactor)
+    public Edge(int Src,int Dest,TrafficFactor trafficFactor,ArrayList bus_ids)
     {
         this.Src = Src;
         this.Dest = Dest;
         this.trafficFactor = trafficFactor;
+        this.bus_ids.addAll(bus_ids);
     }
 
 }

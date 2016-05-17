@@ -15,37 +15,43 @@
         android:layout_height="wrap_content"
         android:text="Source"/>
 
-    <EditText
-        android:id="@+id/id_source_location"
+    <Spinner
+        android:id="@+id/src_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+    </Spinner>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Destination"/>
 
-    <EditText
-        android:id="@+id/id_destination_location"
+    <Spinner
+        android:id="@+id/dest_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Constraints"/>
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/const_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:layout_height="wrap_content">
 
+    </Spinner>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/test"
         />
+    </ScrollView>
 
     <Button
         android:layout_width="match_parent"
