@@ -103,4 +103,9 @@ public class Machine {
         return  buses;
     }
 
+    double getDrivingDistance(String src, String dest)
+    {
+        return 1.0;
+    }
+
 }
