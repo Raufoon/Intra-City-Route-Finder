@@ -82,6 +82,7 @@ public class CityMapInfo {
         TrafficFactor trafficFactor = null;
         int morning=0,noon=0,night=0;
         ArrayList bus_ids = new ArrayList();
+        int distance=1;
 
         Bus bus;
         int FareRate=1;
@@ -110,6 +111,7 @@ public class CityMapInfo {
                     else if(name.equals("Noon")) noon = Integer.parseInt(parser.nextText());
                     else if(name.equals("Night")) night = Integer.parseInt(parser.nextText());
                     else if(name.equals("Bus_id")) bus_ids.add(Integer.parseInt(parser.nextText()));
+                    else if(name.equals("Distance")) distance = Integer.parseInt(parser.nextText());
 
                     else if(name.equals("FareRate")) FareRate = Integer.parseInt(parser.nextText());
 
@@ -125,7 +127,7 @@ public class CityMapInfo {
                     }
                     else if(name.equals("Edge"))
                     {
-                        this.edges.add(new Edge(src,dest,trafficFactor,bus_ids));
+                        this.edges.add(new Edge(src,dest,trafficFactor,bus_ids,distance));
                         for(Object o: bus_ids)
                         {
                             Log.w("!!!!!!!!!!!!!!!!!!",o.toString());

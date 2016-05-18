@@ -13,12 +13,13 @@ You may give it a String as name
 But the GPS co-ordinate of that location must be an attribute of this class
 */
 public class OutputNode {
+    public int id;
     // name of the location area
-    String name;
+    public String name;
     // latitude and longitude
-    LatLng position;
+    public LatLng position;
     //short message
-    String msg;
+    public String msg;
 
     public OutputNode(double Lat, double Long)
     {
@@ -27,8 +28,9 @@ public class OutputNode {
         this.name = "";
     }
 
-    public OutputNode(String name,double Lat, double Long, String msg)
+    public OutputNode(int id,String name,double Lat, double Long, String msg)
     {
+        this.id = id;
         position = new LatLng(Lat,Long);
         this.msg = msg;
         this.name = name;

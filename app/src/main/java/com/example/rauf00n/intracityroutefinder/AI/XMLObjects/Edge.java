@@ -10,13 +10,15 @@ public class Edge {
     public int Dest;
     public TrafficFactor trafficFactor;
     public ArrayList bus_ids = new ArrayList();
+    public int distance;
 
-    public Edge(int Src,int Dest,TrafficFactor trafficFactor,ArrayList bus_ids)
+    public Edge(int Src,int Dest,TrafficFactor trafficFactor,ArrayList bus_ids,int distance)
     {
         this.Src = Src;
         this.Dest = Dest;
         this.trafficFactor = trafficFactor;
         this.bus_ids.addAll(bus_ids);
+        this.distance = distance;
     }
 
 }

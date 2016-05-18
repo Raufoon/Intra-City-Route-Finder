@@ -3,21 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="com.example.rauf00n.intracityroutefinder.MainMenuActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_small"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_weight=".5"
+            android:gravity="center_vertical"
+            android:textSize="30dp"
+            android:layout_height="match_parent"
+            android:text="Intra City\nRoute Finder"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
         android:gravity="bottom"
         android:orientation="vertical">
         <Button
@@ -25,24 +39,36 @@
             android:layout_height="wrap_content"
             android:layout_weight=".25"
             android:text="Find a route"
+            android:textSize="30px"
+            android:textColor="#ffffff"
+            android:background="#088da5"
             android:onClick="startInputActivity"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
+            android:textSize="30px"
+            android:textColor="#ffffff"
+            android:background="#6a5ed6"
             android:text="Saved routes"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
+            android:textSize="30px"
+            android:textColor="#ffffff"
+            android:background="#ffe432"
             android:text="Settings"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
+            android:textSize="30px"
+            android:textColor="#ffffff"
+            android:background="#9595a1"
             android:text="About"
             />
     </LinearLayout>
