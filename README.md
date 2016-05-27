@@ -15,21 +15,21 @@
 <table>
 <tr>
   <td>
-  <img src="http://i.imgur.com/cMLTmiW.jpg" width="200px" height = "400px">
+  <img src="http://i.imgur.com/cMLTmiW.jpg" width="230px" height = "400px">
   </td>
   <td>
-  <img src="http://i.imgur.com/zzQ1euU.jpg" width="200px" height = "400px">
+  <img src="http://i.imgur.com/zzQ1euU.jpg" width="230px" height = "400px">
   </td>
   <td>
-  <img src="http://i.imgur.com/rsbLIzp.jpg" width="200px" height = "400px">
+  <img src="http://i.imgur.com/rsbLIzp.jpg" width="230px" height = "400px">
   </td>
 </tr>
 <tr>
   <td>
-  <img src="http://i.imgur.com/AsYyNXK.jpg" width="200px" height = "400px">
+  <img src="http://i.imgur.com/AsYyNXK.jpg" width="230px" height = "400px">
   </td>
   <td>
-  <img src="http://i.imgur.com/PskI8lV.jpg" width="200px" height = "400px">
+  <img src="http://i.imgur.com/PskI8lV.jpg" width="230px" height = "400px">
   </td>
 </tr>
 
